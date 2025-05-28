@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from "./main-container.module.css";
+import styles from "./top-container.module.css";
 import {Menu, X} from 'lucide-react';
 
 export default function MainContainer() {
