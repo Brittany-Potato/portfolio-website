@@ -1,0 +1,54 @@
+/*
+ * The main card.
+ */
+.contactInformation {
+    /* --- SIZING & POSITIONING --- */
+    position: absolute;
+    /* Using absolute is often more predictable than margin */
+    top: 21.2%;
+    left: 48%;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    /* Use padding to create space from the edges */
+    box-sizing: border-box;
+
+    /* --- STYLING --- */
+    background-color: black;
+    border: rgb(0, 255, 255) solid 2px;
+    box-shadow: 0 0 2px black, 0 0 20px black, 0 0 30px rgb(0, 191, 255),
+        0 0 40px rgb(0, 255, 255);
+}
+
+
+/*
+ * The title.
+ */
+.title {
+    padding-bottom: 1%;
+    width: 100%;
+    text-align: center;
+    font-size: 29px;
+
+
+    /* You can remove all margin/height properties */
+    color: #3f99ad;
+    text-shadow: 0 0 2px black, 0 0 20px black, 0 0 30px rgb(0, 191, 255),
+        0 0 40px rgb(0, 255, 255);
+    border-bottom: dashed 2px #3f99ad;
+}
+
+
+.subTitle {
+    color: #3f99ad;
+    font-size: 20px;
+}
+
+.subTitle a {
+    text-decoration: none;
+    color: rgb(250, 201, 230);
+}
+
+.subTitle:hover a {
+    color: rgb(243, 139, 226);
+}
