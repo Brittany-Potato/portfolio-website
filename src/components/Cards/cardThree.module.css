@@ -122,3 +122,28 @@ NEW STYLES FOR THE CHAT INTERFACE
     background-color: #555;
     cursor: not-allowed;
 }
+
+/* -----------------SCROLL BAR--------------------- */
+
+/* 1. The scrollbar itself */
+.chatWindow::-webkit-scrollbar {
+  width: 8px; /* Sets the width of the vertical scrollbar */
+}
+
+/* 2. The track (the background the scrollbar moves along) */
+.chatWindow::-webkit-scrollbar-track {
+  background: #0d1117; /* A very dark color, but not pure black */
+  border-radius: 4px;
+}
+
+/* 3. The thumb (the draggable part of the scrollbar) */
+.chatWindow::-webkit-scrollbar-thumb {
+  background-color: #3f99ad; /* Your main neon blue color */
+  border-radius: 4px;
+  border: 1px solid #0d1117; /* A small border to make it pop */
+}
+
+/* 4. The thumb on hover */
+.chatWindow::-webkit-scrollbar-thumb:hover {
+  background-color: #61dafb; /* A slightly brighter blue for interactivity */
+}
