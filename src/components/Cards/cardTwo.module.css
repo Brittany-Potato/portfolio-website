@@ -1,0 +1,92 @@
+.jsDictionary {
+    /* --- SIZING & POSITIONING --- */
+    position: absolute;
+    top: 21.2%;
+    left: 25.5%;
+    width: 400px;
+    height: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* --- STYLING --- */
+    background-color: black;
+    border: rgb(0, 255, 255) solid 2px;
+    box-shadow: 0 0 2px black, 0 0 20px black, 0 0 30px rgb(0, 191, 255),
+        0 0 40px rgb(0, 255, 255);
+        
+    /* --- FLEXBOX LAYOUT --- */
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding-bottom: 1%;
+    text-align: center;
+    font-size: 29px;
+    color: #3f99ad;
+    text-shadow: 0 0 2px black, 0 0 20px black, 0 0 30px rgb(0, 191, 255),
+        0 0 40px rgb(0, 255, 255);
+    border-bottom: dashed 2px #3f99ad;
+    flex-shrink: 0; /* Prevents the title from shrinking */
+}
+
+.githubContainer {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0; /* The key to fixing the overflow */
+    padding-right: 10px;
+}
+
+.githubContainer dt {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: #3f99ad;
+    padding: 4px 0;
+}
+
+.githubContainer dd {
+  margin-left: 0; /* <-- THE KEY FIX: Removes the unwanted indentation */
+  margin-top: 8px;
+  padding: 15px; /* This padding is INSIDE the box, giving the text breathing room */
+  background-color: rgba(10, 25, 41, 0.5);
+  border-radius: 5px;
+  border-left: 3px solid #3f99ad;
+}
+
+.githubContainer dt:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.githubContainer pre,
+.githubContainer code {
+    color: #e0e0e0; /* THIS IS THE FIX: A readable light grey, not pure white */
+    font-family: 'Fira Code', Consolas, 'Courier New', monospace; /* A professional coding font */
+    font-size: 0.85rem; /* Makes the code font slightly smaller and cleaner */
+    white-space: pre-wrap; /* Ensures long lines of code will wrap */
+    word-wrap: break-word; /* Helps with wrapping very long unbroken strings */
+}
+
+/* -----------------SCROLL BAR--------------------- */
+
+/* 1. The scrollbar itself */
+.githubContainer::-webkit-scrollbar {
+  width: 8px; /* Sets the width of the vertical scrollbar */
+}
+
+/* 2. The track (the background the scrollbar moves along) */
+.githubContainer::-webkit-scrollbar-track {
+  background: #0d1117; /* A very dark color, but not pure black */
+  border-radius: 4px;
+}
+
+/* 3. The thumb (the draggable part of the scrollbar) */
+.githubContainer::-webkit-scrollbar-thumb {
+  background-color: #3f99ad; /* Your main neon blue color */
+  border-radius: 4px;
+  border: 1px solid #0d1117; /* A small border to make it pop */
+}
+
+/* 4. The thumb on hover */
+.githubContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #61dafb; /* A slightly brighter blue for interactivity */
+}
